@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Inline styling for basic layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .about-us-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .about-us-text {
+            width: 50%;
+            text-align: left;
+            padding-right: 20px;
+        }
+        h1 {
+            color: #107241;
+        }
+        .about-us-text p {
+            margin: 10px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .image-frame {
+            width: 40%;
+            position: relative;
+        }
+        .image-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .nav-icons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .nav-icons i {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="about-us-container">
+    <!-- Left Text Section -->
+    <div class="about-us-text">
+        <h1>About Us</h1>
+        <p><strong>MISSION:</strong> To become the leading tourism company in Tanzania, known for our exceptional service quality and commitment to preserving the environment and local cultures.</p>
+        <p><strong>VISION:</strong> To offer unparalleled adventure experiences that highlight Tanzania's natural wonders and rich cultural heritage, ensuring customer satisfaction and promoting sustainable tourism.</p>
+        <p><strong>SERVICES:</strong> We offer coastal beach tours, museum tours, and mountain treks with experienced guides. Our goal is to provide unforgettable experiences through guided visits to Tanzania’s stunning landscapes.</p>
+        <p><strong>CORE VALUES:</strong> Our core values include customer satisfaction, integrity, sustainability, excellence, and cultural respect. We prioritize our clients' needs while promoting local cultures and environmental sustainability.</p>
+    </div>
+
+    <!-- Right Image Slider Section -->
+    <div class="image-frame">
+        <img id="aboutUsImage" src="https://www.go2africa.com/wp-content/uploads/2013/01/ngorongoro-crater.jpg.webp" alt="Tanzania Scenery">
+        <div class="nav-icons">
+            <i class="fas fa-chevron-left" onclick="previousImage()"></i>
+            <i class="fas fa-chevron-right" onclick="nextImage()"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Array of image URLs for the image frame
+    const images = [
+        "https://www.go2africa.com/wp-content/uploads/2013/01/ngorongoro-crater.jpg.webp",
+        "https://assets.travelcentre.us/media/dealgallery-10198-2/en/dealgallery-10198-2.jpg",
+        "https://skift.com/wp-content/uploads/2022/05/20211006113821_IMG_8177_1-scaled-e1652015057806-1536x1023.jpg",
+        "https://onsafarikenya.com/wp-content/uploads/2017/07/Car-with-Kili-wide-view-1.jpg",
+        "https://onsafarikenya.com/wp-content/uploads/2017/07/Camp-Tsavo-tent-600x600.jpeg",
+        "https://onsafarikenya.com/wp-content/uploads/2017/07/Images-various1-108.jpg"
+    ];
+    
+    let currentIndex = 0;
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("aboutUsImage").src = images[currentIndex];
+    }
+
+    function previousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById("aboutUsImage").src = images[currentIndex];
+    }
+</script>
+
+<!-- Link to Font Awesome for icons (ensure this is included in your project) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>

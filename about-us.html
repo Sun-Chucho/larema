@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Larema Trekking</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #e6e7e6;
+
+            
+        }
+        
+        .navbar {
+            background-color: #e6e7e6;
+            color: #107241;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .navbar .nav-links a {
+            color: #107241;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        
+        .navbar .nav-links a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .navbar img {
+            width: 120px;
+            height: 80px;
+            margin-left: auto; /* Push the logo to the right */
+        }
+        
+        .container {
+            padding: 5%;
+            margin-top: 0px; /* Adjust for fixed navbar */
+            margin-bottom: 10%;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+        }
+        
+        .form-group button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        
+        .form-group button:hover {
+            background-color: #2980b9;
+        }
+        
+        .footer {
+            background-color: #a66358;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: none; /* Initially hidden */
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer i {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+      <img src="logo.png" style="position: fixed; right: 10px; width: 120px; height: 80px; margin-right: 10px;" alt="Logo">
+        <div class="nav-links">
+            <a href="tanzania.html">Home</a>
+            <a href="tanzania.html#travel-packages">Travel Packages</a>
+            <a href="#larema-trips">Larema Trips</a>
+            <a href="#trip-reviews">Trip Reviews</a>
+            <a href="#about-us">About Us</a>
+            <a href="booking.html">Booking</a>
+        </div>
+        
+    </div>
+<!-- avout us-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Inline styling for basic layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .about-us-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .about-us-text {
+            width: 50%;
+            text-align: left;
+            padding-right: 20px;
+        }
+        h1 {
+            color: #107241;
+        }
+        .about-us-text p {
+            margin: 10px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .image-frame {
+            width: 40%;
+            position: relative;
+        }
+        .image-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .nav-icons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .nav-icons i {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="about-us-container" style="margin: 7%;">
+    <!-- Left Text Section -->
+    <div class="about-us-text">
+        <h1>About Us</h1>
+        <p><strong>MISSION:</strong> To become the leading tourism company in Tanzania, known for our exceptional service quality and commitment to preserving the environment and local cultures.</p>
+        <p><strong>VISION:</strong> To offer unparalleled adventure experiences that highlight Tanzania's natural wonders and rich cultural heritage, ensuring customer satisfaction and promoting sustainable tourism.</p>
+        <p><strong>SERVICES:</strong> We offer coastal beach tours, museum tours, and mountain treks with experienced guides. Our goal is to provide unforgettable experiences through guided visits to Tanzania’s stunning landscapes.</p>
+        <p><strong>CORE VALUES:</strong> Our core values include customer satisfaction, integrity, sustainability, excellence, and cultural respect. We prioritize our clients' needs while promoting local cultures and environmental sustainability.</p>
+    </div>
+
+    <!-- Right Image Slider Section -->
+    <div class="image-frame">
+        <img id="aboutUsImage" src="https://www.go2africa.com/wp-content/uploads/2013/01/ngorongoro-crater.jpg.webp" alt="Tanzania Scenery">
+        <div class="nav-icons">
+            <i class="fas fa-chevron-left" onclick="previousImage()"></i>
+            <i class="fas fa-chevron-right" onclick="nextImage()"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Array of image URLs for the image frame
+    const images = [
+        "https://www.go2africa.com/wp-content/uploads/2013/01/ngorongoro-crater.jpg.webp",
+        "https://assets.travelcentre.us/media/dealgallery-10198-2/en/dealgallery-10198-2.jpg",
+        "https://skift.com/wp-content/uploads/2022/05/20211006113821_IMG_8177_1-scaled-e1652015057806-1536x1023.jpg",
+        "https://onsafarikenya.com/wp-content/uploads/2017/07/Car-with-Kili-wide-view-1.jpg",
+        "https://onsafarikenya.com/wp-content/uploads/2017/07/Camp-Tsavo-tent-600x600.jpeg",
+        "https://onsafarikenya.com/wp-content/uploads/2017/07/Images-various1-108.jpg"
+    ];
+    
+    let currentIndex = 0;
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("aboutUsImage").src = images[currentIndex];
+    }
+
+    function previousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById("aboutUsImage").src = images[currentIndex];
+    }
+</script>
+
+<!-- Link to Font Awesome for icons (ensure this is included in your project) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>
+
+    <!-- Contact Form -->
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="tel:+1234567890" title="Telephone"><i class="fa fa-phone"></i></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="mailto:example@example.com" title="Email"><i class="fa fa-envelope"></i></a>
+        <p>&copy; 2024 Larema Trekking. All rights reserved.</p>
+    </div>
+   
+    <script>
+        // JavaScript to show/hide the footer based on scroll position
+        const footer = document.getElementById('footer');
+        
+        window.addEventListener('scroll', function() {
+            // Calculate the height of the document and the viewport
+            const scrollTop = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            
+            // Check if the user has scrolled to the bottom
+            if (scrollTop + viewportHeight >= documentHeight - 1) {
+                // User is at or near the bottom of the page
+                footer.style.display = 'block';
+            } else {
+                // User is not at the bottom
+                footer.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- Font Awesome for icons (ensure to include this in your project for the icons to work) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>

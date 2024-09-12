@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form - Larema Trekking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e7e6;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #e6e7e6;
+            color: #107241;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .navbar .nav-links a {
+            color: #107241;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        
+        .navbar .nav-links a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .navbar img {
+            width: 120px;
+            height: 80px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 100px auto 0; /* Added top margin to avoid overlap with navbar */
+            padding: 20%;
+            padding-top: 5%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            color: #107241;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #107241;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0c5a29;
+        }
+        .trip-options {
+            margin-bottom: 20px;
+        }
+        .trip-options label {
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #a66358;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: none; /* Initially hidden */
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer i {
+            margin: 0 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="tanzania.html">Home</a>
+            <a href="tanzania.html#travel-packages">Travel Packages</a>
+            <a href="#larema-trips">Larema Trips</a>
+            <a href="#trip-reviews">Trip Reviews</a>
+            <a href="about-us.html">About Us</a>
+            <a href="#booking">Booking</a>
+        </div>
+        <img src="logo.png" alt="Logo">
+    </div>
+    
+    <div class="container" style="margin-bottom:40px;">
+        <h1>Book Your Trip</h1>
+        <form action="submit_booking.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Number:</label>
+                <input type="text" id="whatsapp" name="whatsapp" required>
+            </div>
+            <div class="form-group">
+                <label for="date-scheduled">Date Scheduled:</label>
+                <input type="text" id="date-scheduled" name="date-scheduled" class="date-picker" required>
+            </div>
+            <div class="form-group trip-options">
+                <label for="trip">Select a Trip:</label>
+                <select id="trip" name="trip">
+                    <option value="">--Select a Trip--</option>
+                    <option value="Tanzania Highlights">Tanzania Highlights</option>
+                    <option value="Tanzania Safari and Coast">Tanzania Safari and Coast</option>
+                    <option value="Safari to Sea">Safari to Sea</option>
+                    <option value="Serengeti Trek">Serengeti Trek</option>
+                    <option value="Marangu Trek">Marangu Trek</option>
+                    <option value="Machame Route">Machame Route</option>
+                    <option value="Tanzania on a Bike">Tanzania on a Bike</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="manual-entry">
+                    <input type="checkbox" id="manual-entry" name="manual-entry"> Enter Trip Details Manually
+                </label>
+                <textarea id="manual-trip-details" name="manual-trip-details" placeholder="Enter your trip details here..." style="display: none;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="number-of-people">Number of People:</label>
+                <input type="number" id="number-of-people" name="number-of-people" min="1" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script>
+        // Initialize date picker
+        flatpickr("#date-scheduled", {
+            minDate: "today",
+            dateFormat: "Y-m-d"
+        });
+
+        // Toggle manual entry textarea
+        document.getElementById('manual-entry').addEventListener('change', function() {
+            document.getElementById('manual-trip-details').style.display = this.checked ? 'block' : 'none';
+        });
+    </script>
+
+     <!-- Footer -->
+    <div class="footer" id="footer">
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="tel:+1234567890" title="Telephone"><i class="fa fa-phone"></i></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="mailto:example@example.com" title="Email"><i class="fa fa-envelope"></i></a>
+        <p>&copy; 2024 Larema Trekking. All rights reserved.</p>
+    </div>
+   
+    <script>
+        // JavaScript to show/hide the footer based on scroll position
+        const footer = document.getElementById('footer');
+        
+        window.addEventListener('scroll', function() {
+            // Calculate the height of the document and the viewport
+            const scrollTop = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            
+            // Check if the user has scrolled to the bottom
+            if (scrollTop + viewportHeight >= documentHeight - 1) {
+                // User is at or near the bottom of the page
+                footer.style.display = 'block';
+            } else {
+                // User is not at the bottom
+                footer.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- Font Awesome for icons (ensure to include this in your project for the icons to work) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>

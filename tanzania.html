@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Larema Trekking</title>
+    <style>
+        body {
+          margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #e6e7e6; /* Changed to pale white */
+
+        }
+        .navbar {
+            background-color: #e6e7e6;
+            color:#107241;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            margin-top: 60px; /* Adjust for fixed navbar */
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover; /* Maintain quality */
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            text-align: left;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .what-to-expect {
+            font-size: 0.9em;
+            color: #333;
+            text-align: center;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1.1em;
+            margin: 20px 0;
+        }
+        .call-to-action {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .call-to-action:hover {
+            background-color: #2980b9;
+        }
+        .back-to-top {
+            display: block;
+            margin: 20px 0;
+            font-size: 1em;
+            text-align: center;
+        }
+        .back-to-top a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .back-to-top a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+      <img src="logo.png" style="position: fixed; right: 10px; width: 120px; height: 80px; margin-right: 10px;" alt="Logo">
+        <div class="nav-links" ">
+          <a href="#home" style="color: #107241; font-size: 16px; font-weight: bold;">Home</a>
+          <a href="#travel-packages" style="color: #107241; font-size: 16px; font-weight: bold;">Travel Packages</a>
+          <a href="#larema-trips" style="color: #107241; font-size: 16px; font-weight: bold;">Larema Trips</a>
+          <a href="#trip-reviews" style="color: #107241; font-size: 16px; font-weight: bold;">Trip Reviews</a>
+          <a href="about-us.html" style="color: #107241; font-size: 16px; font-weight: bold;">About Us</a>
+          <a href="booking.html" style="color: #107241; font-size: 16px; font-weight: bold;">Booking</a>
+  
+        </div>
+    </div>
+
+    <div class="container" id="home">
+        <h1>Discover Tanzania with Larema Trekking</h1>
+        
+        <div class="hero-carousel" style="position: relative; max-width: 100%; overflow: hidden; height: 500px;">
+          <img src="https://th.bing.com/th/id/R.0eb886d60e94b6a4d8bf99949e5e60d9?rik=SO%2fDEzfsRvfi%2fw&pid=ImgRaw&r=0" 
+               alt="Mount Kilimanjaro" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out;">
+          <img src="https://images.unsplash.com/photo-1602410125631-7e736e36797c?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Zanzibar Coastline" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+          <img src="https://images.unsplash.com/photo-1659639237213-e30ddf33fd4c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"               alt="Serengeti Acacia Tree" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+          <img src="https://images.unsplash.com/photo-1721404285315-662714c26245?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Serengeti Rhinos" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+          <img src="https://images.unsplash.com/photo-1690279844829-c5e3cb643d83?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Zebras in Kenya" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+          <img src="https://images.unsplash.com/photo-1634646350433-fe03ad698448?q=80&w=1334&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Crystal Blue Sea" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+          <img src="https://images.unsplash.com/photo-1602410141957-ee70b4739066?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Mount Kilimanjaro with Acacia" 
+               style="width: 100%; height: auto; max-height: 500px; object-fit: cover; position: absolute; transition: opacity 1s ease-in-out; opacity: 0;">
+      </div>
+      <script>
+        // JavaScript for image carousel transition
+        const images = document.querySelectorAll('.hero-carousel img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages - Larema Trekking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e7e6; /* Background color as specified */
+            margin: 0;
+            padding: 0;
+        }
+        .travel-packages {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .travel-packages h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .package-cell {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .package-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            display: block;
+        }
+        .package-info {
+            padding: 10px;
+        }
+        .package-name {
+            font-size: 26px;
+            margin: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .package-route {
+            font-size: 20px;
+            font-style: oblique;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .package-details {
+            text-align: center;
+        }
+        .package-details span {
+            display: block;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="travel-packages" id="travel-packages">
+        <h2>Our Travel Packages</h2>
+        <div class="package-grid">
+            <!-- Travel Package 1 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltf6f9b3502d817f53/64f7550cc7782a1c0f168303/YGSA_2023.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp" alt="Tanzania Highlights" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltf6f9b3502d817f53/64f7550cc7782a1c0f168303/YGSA_2023.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Tanzania Highlights</p>
+                    <p class="package-route">Musoma to Arusha</p>
+                    <div class="package-details">
+                        <span>Start: Musoma</span>
+                        <span>End: Arusha</span>
+                        <span>Days: 6</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+            <!-- Travel Package 2 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/blt9071346827081eb1/6451a123ebc12a7f465d9c9e/YGSZC_2023.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp" alt="Tanzania Safari and Coast" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/blt9071346827081eb1/6451a123ebc12a7f465d9c9e/YGSZC_2023.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Tanzania Safari and Coast</p>
+                    <p class="package-route">Musoma to Zanzibar</p>
+                    <div class="package-details">
+                        <span>Start: Musoma</span>
+                        <span>End: Zanzibar</span>
+                        <span>Days: 8</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+            <!-- Travel Package 3 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltc24d9b408b9898a7/65b97919efe9ead9cbf35a22/YXODC_2024_conv.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp" alt="Safari to Sea" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltc24d9b408b9898a7/65b97919efe9ead9cbf35a22/YXODC_2024_conv.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Safari to Sea</p>
+                    <p class="package-route">Mto wa Mbu to Stonetown</p>
+                    <div class="package-details">
+                        <span>Start: Mto wa Mbu</span>
+                        <span>End: Stonetown</span>
+                        <span>Days: 11</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+            <!-- Travel Package 4 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/blt74ef068ec8e4605c/65b0cf400812c3830fa48aad/YGOT_2024_conv.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp" alt="Serengeti Trek" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/blt74ef068ec8e4605c/65b0cf400812c3830fa48aad/YGOT_2024_conv.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Serengeti Trek</p>
+                    <p class="package-route">Mto wa Mbu to Arusha</p>
+                    <div class="package-details">
+                        <span>Start: Mto wa Mbu</span>
+                        <span>End: Arusha</span>
+                        <span>Days: 6</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+            <!-- Travel Package 5 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltc2faf3ab392b53f8/667361df2b58809d4a5b5f50/ykxm_2025.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp" alt="Marangu Trek" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltc2faf3ab392b53f8/667361df2b58809d4a5b5f50/ykxm_2025.gif?branch=prd&width=1080&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Marangu Trek</p>
+                    <p class="package-route">Marangu to Marangu</p>
+                    <div class="package-details">
+                        <span>Start: Marangu</span>
+                        <span>End: Marangu</span>
+                        <span>Days: 8</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+            <!-- Travel Package 6 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/blt507fe98db04d0544/66bc97a890cba81ac4aa1653/ykxa_2025-1.gif?branch=prd&width=800&quality=75&format=pjpg&auto=webp" alt="Machame Route" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/blt507fe98db04d0544/66bc97a890cba81ac4aa1653/ykxa_2025-1.gif?branch=prd&width=800&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Machame Route</p>
+                    <p class="package-route">Moshi to Moshi</p>
+                    <div class="package-details">
+                        <span>Start: Moshi</span>
+                        <span>End: Moshi</span>
+                        <span>Days: 8</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+            <!-- Travel Package 7 -->
+            <div class="package-cell">
+                <img src="https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltce268e81e795b911/6336e7005f70957f6726e8c4/ytxc_2020.gif?branch=prd&width=800&quality=75&format=pjpg&auto=webp" alt="Tanzania on a Bike" class="package-image" onclick="openLightbox('https://www.intrepidtravel.com/v3/assets/blt0de87ff52d9c34a8/bltce268e81e795b911/6336e7005f70957f6726e8c4/ytxc_2020.gif?branch=prd&width=800&quality=75&format=pjpg&auto=webp')">
+                <div class="package-info">
+                    <p class="package-name">Tanzania on a Bike</p>
+                    <p class="package-route">Arusha to Arusha</p>
+                    <div class="package-details">
+                        <span>Start: Arusha</span>
+                        <span>End: Arusha</span>
+                        <span>Days: 13</span>
+                    </div>
+                    <a href="#" style="display: block; text-align: center; margin-top: 10px; padding: 10px 20px; font-size: 16px; color: #ffffff; background-color: #168b64; border: 2px solid #007bff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#a66358'; this.style.color='#ffffff';">View Trip</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for enlarged images -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+<div style="font-family: Arial, sans-serif; margin-left: 5%; color: #333;">
+    <h1 style="font-size: 36px; text-align: center; color: #333;">Tanzania Travel Guide</h1>
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s; color: #333">
+        Best Time to Visit: Choosing the Ideal Season for Your Tanzania Experience
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Tanzania’s climate varies by region. For pleasant weather, visit in January or February. For wildlife, late June to October is best, particularly for the Serengeti. The rainy season (March to May) brings fewer tourists but expect afternoon showers.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Visa Requirements: Ensuring a Smooth Entry into Tanzania
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Most nationalities, including those from the USA, UK, and Australia, need a visa to enter Tanzania. You can apply in advance through a Tanzanian consulate or obtain a visa on arrival at major airports like Dar es Salaam, Zanzibar, and Kilimanjaro.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Tipping Etiquette: Understanding Local Customs and Showing Appreciation
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Tipping isn't mandatory but is appreciated. Consider tipping guides, porters, and service workers, as wages are generally low. Rounding up the bill at restaurants is also a common practice.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Internet Access: Staying Connected in Tanzania
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Internet access is available in larger cities and towns through cafes, but you may experience limited or no access in rural areas.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Mobile Coverage
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Mobile coverage is robust in cities and towns but can be sparse in rural areas. Make sure to activate global roaming before traveling.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Toilets in Tanzania: Being Prepared for Basic Facilities
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Squat or pit toilets are the norm throughout Tanzania, with western-style flush toilets available in hotels and tourist areas. It’s a good idea to bring your own soap and toilet paper.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Costs of Essentials: Budgeting for Your Tanzania Trip
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Prices in Tanzanian Shillings (TZS) include street snacks (500-3,000 TZS), local beer (2,000-4,000 TZS), local meals (3,000 TZS), and dining in international restaurants (10,000-20,000 TZS).
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Drinking Water: Ensuring Safe Consumption
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Tap water in Tanzania isn't safe to drink. Use filtered water, avoid ice, and peel fruits and vegetables before eating. For environmental reasons, carry a reusable water bottle.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Credit Card Use: Convenient Payment Options
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Credit cards are widely accepted in large hotels and some restaurants, but smaller vendors often only accept cash. Be sure to carry sufficient cash for all purchases.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        ATM Access
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        ATMs are readily available in urban centers but less common in rural areas. Always carry extra cash when traveling outside major cities.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Public Holidays: Planning Your Trip Around Local Celebrations
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Tanzania celebrates a variety of public holidays such as New Year’s Day (January 1), Union Day (April 26), and Christmas (December 25). Consider these dates when planning your travel itinerary.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Supporting Local Communities: Contributing to Sustainable Tourism
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Your visit can positively impact local communities, such as through the Kilimanjaro Porters Assistance Project (KPAP), which promotes fair treatment of porters. Embracing responsible tourism supports these vital initiatives.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Travel Insurance: Protecting Yourself from Unexpected Events
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        Travel insurance is mandatory for your trip, covering potential medical issues and travel-related emergencies to ensure a worry-free journey. Be sure to arrange it before departure.
+      </p>
+    </details>
+  
+    <hr style="margin: 20px 0;">
+  
+    <details>
+      <summary style="font-size: 24px; font-weight: bold; font-style: italic; cursor: pointer; transition: 0.3s;">
+        Health and Safety: Taking Precautions for a Healthy and Safe Trip
+      </summary>
+      <p style="margin-left: 20px; font-size: 18px;">
+        To ensure a safe trip, follow local health guidelines and check travel advisories before leaving. Stay hydrated, use sunscreen, and maintain good hygiene practices throughout your travels.
+      </p>
+    </details>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10%; padding: 50px; ">
+  <!-- Image on the left with margin -->
+  <img src="logo.png" style="width: 400px; height:300px ;">
+
+  <!-- Text beside the image -->
+  <p style="font-size: 28px;  margin-left: 50px; color: #333; line-height: 1.4;">
+      We aim to offer unparalleled adventure experiences that highlight Tanzania's natural wonders and rich cultural heritage, ensuring customer satisfaction and promoting sustainable tourism.
+  </p>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic styling for the page content */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e6e7e6;
+            padding-bottom: 60px; /* Ensure content isn't hidden behind footer */
+        }
+        
+        /* Footer styling */
+        .footer {
+            background-color: #a66358;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: none; /* Initially hidden */
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Icon styling */
+        .footer i {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content of the page -->
+
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="tel:+1234567890" title="Telephone"><i class="fa fa-phone"></i></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-solid fa-x"></i></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="mailto:example@example.com" title="Email"><i class="fa fa-envelope"></i></a>
+        <p>&copy; 2024 Larema Trekking. All rights reserved.</p>
+    </div>
+   
+    <script>
+        // JavaScript to show/hide the footer based on scroll position
+        const footer = document.getElementById('footer');
+        
+        window.addEventListener('scroll', function() {
+            // Calculate the height of the document and the viewport
+            const scrollTop = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            
+            // Check if the user has scrolled to the bottom
+            if (scrollTop + viewportHeight >= documentHeight - 1) {
+                // User is at or near the bottom of the page
+                footer.style.display = 'block';
+            } else {
+                // User is not at the bottom
+                footer.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- Font Awesome for icons (ensure to include this in your project for the icons to work) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
+
+
+</body>
+</html>
